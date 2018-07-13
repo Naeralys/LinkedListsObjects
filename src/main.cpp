@@ -3,9 +3,11 @@
 int main() {
 	Application app;
 	
-	if( app.Init() )
-		std::cout << "Application initiated" << std::endl;
+	// Initialize App
+	app.Init();
+	std::cout << "Application initiated" << std::endl;
 
+	// App loop
 	while( app.IsRunning() ) {
 		app.Update();
 	}
