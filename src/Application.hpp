@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Object.hpp"
 #include "Rectangle.hpp"
+#include "Triangle.hpp"
 
 struct Node {
 	Object *value;
@@ -17,7 +18,8 @@ private:
 	struct Node *startPtr;
 	struct Node *nextPtr;
 	
-	void AddNode(struct Node *node );
+	void AddNode( int objectType );
+	void AddNodeChoice();
 	void PrintList();
 	int Menu();
 public:

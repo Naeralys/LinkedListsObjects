@@ -1,13 +1,11 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required( VERSION 3.7 )
 
-project(LinkedListObjects)
+project( LinkedListObjects )
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14" )
+set( source_dir "${PROJECT_SOURCE_DIR}/src/" )
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin )
 
-add_executable(
-	LinkedListObjects
-	src/main.cpp
-	src/Application.cpp
-	src/Object.cpp
-	src/Rectangle.cpp
-)
+file( GLOB source_files "${source_dir}/*.cpp" )
+
+add_executable( LinkedListObjects ${source_files} )

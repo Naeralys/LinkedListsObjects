@@ -1,7 +1,7 @@
 #ifndef Rectangle_hpp
 #define Rectangle_hpp
 
-#include "Object.hpp"
+#include "Application.hpp"
 
 class Rectangle : public Object {
 public:
